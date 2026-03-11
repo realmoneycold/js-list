@@ -1,134 +1,129 @@
-// false -- js
-
-// exercise 1
-// let a = false 
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 2
-// let a = 0 
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 3
-// let a = -0
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 4
-// let a = 0n
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 5
-// let a = -0n
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 6
-// let a = ""
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 7
-// let a = null
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 8
-// let a = undefined
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 9
-// let a = NaN
-// let natija = Boolean(a)
-// console.log(natija)
-
-// true -- js 
-
-// exercise 1
-// let a = {}
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 2
-// let a = []
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 3
-// let a = 42
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 4
-// let a = "0"
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 5
-// let a = "false"
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 6
-// let a = -42
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 7
-// let a = 12n
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 8
-// let a = 3.14
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 9
-// let a = -3.14
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 10
-// let a = Infinity
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 11
-// let a = -Infinity
-// let natija = Boolean(a)
-// console.log(natija)
-
-// exercise 12
-// let a = ...
-// let natija = Boolean(a)
-// console.log(natija)
-
-// Conditional operators    
-
-// let a = 2, b = -1 , c = 3
-// natija = 0
-// if (a>0){
-//     natija ++
+//String1. Sonning necha xonali ekanini, raqamlari yig’indisini chiqaruvchi dastur tuzing.
+// let num = 1298
+// num = num.toString()
+// let sum = 0
+// for(let item of num){
+//     console.log(item)
+//     sum += Number(item)
 // }
-// if (b>0){
-//     natija ++
-// } 
+// console.log(sum)
 
-// if (c>0){
-//     natija ++
+//String2. UTF-16 jadvalida kiritilgan belgidan oldin va keyin turuvchi belgilarni chiqaruvchi programma tuzilsin.
+// let belgi = "a"
+// let position = belgi.codePointAt()
+// console.log(String.fromCharCode(position+1))
+// console.log(String.fromCharCode(position-1))
+
+//String3. UTF-16 jadvali orqali faqat katta va kichik harflardan iborat satr qaytaruvchi mos ravishda getUpperCases() vs getLowerCases() nomli funksiyalar hosil qiling.
+// function getUpperCases(str){
+//     let natija = ""
+//     for (let item of str){
+//         let letter = str.charCodeAt(item);
+//         if (letter >= 97 && letter <= 122){
+//             natija += String.fromCharCode(code - 32)
+//         }   
+//         else{
+//             natija += str[item]
+//         }
+//     }
+//     return natija;
+// }
+// function getLowercase(str){
+//     let natija = "";
+//     for (let item of str){
+//         let letter = str.charCodeAt(item);
+//         if (letter>= 65 && letter <=90){
+//             natija += String.fromCharCode(code + 32);
+//         }
+//         else{
+//             natija +=str[item]
+//         }
+//     }
+//     return natija;
+// }
+// let satr = "ABcdd"
+// console.log(`Original: ${satr}`)
+// console.log(`Upper: `, getUpperCases(satr));
+// console.log(`Lower: `, getLowercase(satr));
+
+
+//String4. Satr berilgan. Shu satr belgilari orasiga bittadan probel qo'yilgan satr hosil qiluvchi va ekranga chiqaruvchi programma tuzilsin. Kiritilgan satrda probel yo'q deb qabul qilinsin.
+// Input: let str = "abcd"
+// Output: "a b c d"
+// let str = "abcd";
+// let natija = str.split("").join(" ");
+// console.log(natija)
+
+//String5. C belgisi va S1, S2 satrlari berilgan. S1 satriga shu satrda uchragan har bir C belgisidan keyin S2 satrini qo'shuvchi programma tuzilsin.
+// Input: S1 = "Hello world"; S2 = "*", C = "l"
+// Output: "Hel*l*o worl*d"
+// let S1 = "Hello world";
+// let S2 = "*";
+// let C = "l";
+// let result = S1.split(C).join(C + S2);
+// console.log(result);
+
+//String7. Probel bilan ajratilgan o'zbekcha so'zlardan iborat str nomli satr berilgan. Satrdagi so'zlar sonini qaytaruvchi getNumberOfWords(str) nomli funksiya tuzilsin.
+// function getNumberOfWords(str) {
+//     let sanash = 0;
+//     let suz = false;
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] !== " ") {
+//             if (suz === false) {
+//                 sanash++;
+//                 suz = true; 
+//             }
+//         } else {
+//             suz = false; 
+//         }
+//     }
+//     return sanash;
+// }
+// console.log(getNumberOfWords("Hello world Mr robot! "));
+
+//String8. Probel bilan ajratilgan va faqat katta harflar bilan terilgan o'zbekcha so'zlardan iborat satr berilgan. Satrdagi kamida bitta 'A' harfi bor so'zlar sonini aniqlovchi programma tuzilsin.
+// let satr = "ITZ NOT BIG IDEA";
+// let words = satr.split(' ');
+// let count = 0;
+// for (let soz of words) {
+//     if (soz.includes('A')) {
+//         count++;
+//     }
+// }
+// console.log("'A' harfi bor so'zlar soni:", count);
+
+// function getMinOfString(str){
+//     let words = str.split(' ');
 
 // }
-// console.log("Musbatlar: "+natija)
-// console.log("Manfiylar: " + (3 - natija))
+// getMinOfString("Are you zero or one?")
 
-// x = 2
-// if (x<-2||x>2){
-//     console.log(2*x)
-// }   
-// else {
-//     console.log(-3 * x)
+
+//String10. Faylning to'liq nomini o'zida akslantirgan satr berilgan. Ya'ni disk nomi, papkalar nomi, faylning nomi va kengaytmasi. Satrdan birinchi papka nomini aniqlovchi programma tuzilsin.
+// Input: D:/Abdulaziz/Books/Programmer.exe
+// Output: Abdulaziz
+// let path = "D:/Abdulaziz/Books/Programmer.exe";
+// let qismlar = path.split('/');
+// console.log("Birinchi papka:", qismlar[1]);
+
+////Uyga vazifa
+//Sting1. n butun soni berilgan (1 <= n <= 26). Lotin alfavitidagi dastlabki n ta katta harflarni chiqaruvchi programma tuzilsin.
+// let n = 5;
+// let natija = "";
+// for (let i = 0; i < n; i++) {
+//     natija += String.fromCharCode(65 + i);
 // }
+// console.log(natija); 
+
+//String3. Satr beilgan. Satrning birinchi va oxirgi belgisini UTF-16 jadvalidagi kodini chiqaruvchi programma tuzilsin.
+// let s = "Hello";
+// console.log("First word  number:", s.charCodeAt(0));
+// console.log("Last word number:", s.charCodeAt(s.length - 1));
+
+// /String4. N natural soni va belgi berilgan. N ta kiritilgan belgidan iborat satr hosil qiling va ekranga chiqaring. Masalan: N = 5; Belgi = 'A'; Natija = AAAAA
+// let N = 5;
+// let Belgi = 'G';
+// console.log(Belgi.repeat(N)); 
+
+//String5. Kiritilgan satrni teskari tartibda chiqaruvchi programma tuzilsin.
+    
