@@ -1,0 +1,237 @@
+//String1. Sonning necha xonali ekanini, raqamlari yig’indisini chiqaruvchi dastur tuzing.
+// let num = 1298
+// num = num.toString()
+// let sum = 0
+// for(let item of num){
+//     console.log(item)
+//     sum += Number(item)
+// }
+// console.log(sum)
+
+//String2. UTF-16 jadvalida kiritilgan belgidan oldin va keyin turuvchi belgilarni chiqaruvchi programma tuzilsin.
+// let belgi = "a"
+// let position = belgi.codePointAt()
+// console.log(String.fromCharCode(position+1))
+// console.log(String.fromCharCode(position-1))
+
+//String3. UTF-16 jadvali orqali faqat katta va kichik harflardan iborat satr qaytaruvchi mos ravishda getUpperCases() vs getLowerCases() nomli funksiyalar hosil qiling.
+// function getUpperCases(str){
+//     let natija = ""
+//     for (let item of str){
+//         let letter = str.charCodeAt(item);
+//         if (letter >= 97 && letter <= 122){
+//             natija += String.fromCharCode(code - 32)
+//         }   
+//         else{
+//             natija += str[item]
+//         }
+//     }
+//     return natija;
+// }
+// function getLowercase(str){
+//     let natija = "";
+//     for (let item of str){
+//         let letter = str.charCodeAt(item);
+//         if (letter>= 65 && letter <=90){
+//             natija += String.fromCharCode(code + 32);
+//         }
+//         else{
+//             natija +=str[item]
+//         }
+//     }
+//     return natija;
+// }
+// let satr = "ABcdd"
+// console.log(`Original: ${satr}`)
+// console.log(`Upper: `, getUpperCases(satr));
+// console.log(`Lower: `, getLowercase(satr));
+
+
+//String4. Satr berilgan. Shu satr belgilari orasiga bittadan probel qo'yilgan satr hosil qiluvchi va ekranga chiqaruvchi programma tuzilsin. Kiritilgan satrda probel yo'q deb qabul qilinsin.
+// Input: let str = "abcd"
+// Output: "a b c d"
+// let str = "abcd";
+// let natija = str.split("").join(" ");
+// console.log(natija)
+
+//String5. C belgisi va S1, S2 satrlari berilgan. S1 satriga shu satrda uchragan har bir C belgisidan keyin S2 satrini qo'shuvchi programma tuzilsin.
+// Input: S1 = "Hello world"; S2 = "*", C = "l"
+// Output: "Hel*l*o worl*d"
+// let S1 = "Hello world";
+// let S2 = "*";
+// let C = "l";
+// let result = S1.split(C).join(C + S2);
+// console.log(result);
+
+//String7. Probel bilan ajratilgan o'zbekcha so'zlardan iborat str nomli satr berilgan. Satrdagi so'zlar sonini qaytaruvchi getNumberOfWords(str) nomli funksiya tuzilsin.
+// function getNumberOfWords(str) {
+//     let sanash = 0;
+//     let suz = false;
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] !== " ") {
+//             if (suz === false) {
+//                 sanash++;
+//                 suz = true; 
+//             }
+//         } else {
+//             suz = false; 
+//         }
+//     }
+//     return sanash;
+// }
+// console.log(getNumberOfWords("Hello world Mr robot! "));
+
+//String8. Probel bilan ajratilgan va faqat katta harflar bilan terilgan o'zbekcha so'zlardan iborat satr berilgan. Satrdagi kamida bitta 'A' harfi bor so'zlar sonini aniqlovchi programma tuzilsin.
+// let satr = "ITZ NOT BIG IDEA";
+// let words = satr.split(' ');
+// let count = 0;
+// for (let soz of words) {
+//     if (soz.includes('A')) {
+//         count++;
+//     }
+// }
+// console.log("'A' harfi bor so'zlar soni:", count);
+
+// function getMinOfString(str){
+//     let words = str.split(' ');
+
+// }
+// getMinOfString("Are you zero or one?")
+
+
+//String10. Faylning to'liq nomini o'zida akslantirgan satr berilgan. Ya'ni disk nomi, papkalar nomi, faylning nomi va kengaytmasi. Satrdan birinchi papka nomini aniqlovchi programma tuzilsin.
+// Input: D:/Abdulaziz/Books/Programmer.exe
+// Output: Abdulaziz
+// let path = "D:/Abdulaziz/Books/Programmer.exe";
+// let qismlar = path.split('/');
+// console.log("Birinchi papka:", qismlar[1]);
+
+////Uyga vazifa
+//Sting1. n butun soni berilgan (1 <= n <= 26). Lotin alfavitidagi dastlabki n ta katta harflarni chiqaruvchi programma tuzilsin.
+// let n = 5;
+// let natija = "";
+// for (let i = 0; i < n; i++) {
+//     natija += String.fromCharCode(65 + i);
+// }
+// console.log(natija); 
+
+//String3. Satr beilgan. Satrning birinchi va oxirgi belgisini UTF-16 jadvalidagi kodini chiqaruvchi programma tuzilsin.
+// let s = "Hello";
+// console.log("First word  number:", s.charCodeAt(0));
+// console.log("Last word number:", s.charCodeAt(s.length - 1));
+
+// /String4. N natural soni va belgi berilgan. N ta kiritilgan belgidan iborat satr hosil qiling va ekranga chiqaring. Masalan: N = 5; Belgi = 'A'; Natija = AAAAA
+// let N = 5;
+// let Belgi = 'G';
+// console.log(Belgi.repeat(N)); 
+
+//String5. Kiritilgan satrni teskari tartibda chiqaruvchi programma tuzilsin.
+
+//String6. Satr va N natural soni berilgan. Shu satr belgilari orasiga N tadan "*" belgisi qo’yib yangi satr qaytaruvchi getStringStars(N) nomli funksiya tuzilsin.
+// function getStringStars(str, n) {
+//     let natija = "";
+//     let belgi = "*".repeat(n);
+//     for (let i = 0; i < str.length; i++) {
+//         natija += str[i]; 
+//         if (i < str.length - 1) {
+//             natija += belgi;
+//         }
+//     }
+//     return natija;
+// }
+// console.log(getStringStars("SALOM", 2)); 
+
+    
+// /String7. Satr berilgan. Satrdagi raqamlar sonini aniqlovchi programma tuzilsin. (for of va isNaN dan foydalaning !)
+// let satr = "Those who are crazy enough to think that they can change the world are the ones who do it. Mac Tosh 4415"
+// let numbers = 0;
+// for (let belgi of satr){
+//     if (belgi !==  ' ' && !isNaN(belgi)){
+//         numbers++;
+//     }
+// }
+
+// console.log(numbers)
+//String8. Satr berilgan. Satrdagi kichik lotin va kirill harflarining umumiy sonini aniqlovchi programma tuzilsin.
+// couldnt do it (
+
+//String9. Satr berilgan. Satrdagi xamma katta lotin harflari kichigiga almashtiruvchi programma tuzilsin.
+// let satr = "IT is all elusion! ";
+// let output = satr.toLowerCase();
+// console.log(output);
+
+//String10. Satr berilgan. Satrdagi xamma katta harflarini kichigiga, kichiklarini kattasiga almashtiruvchi programma tuzilsin.
+// let satr = "THe code is FIDELIO, ";
+// let output = "";
+// for (let harf of satr) {
+//     if (harf === harf.toUpperCase()) {
+//         output += harf.toLowerCase();
+//     } 
+//     else {
+//         output += harf.toUpperCase();
+//     }
+// }
+// console.log("Previously :", satr);
+// console.log("Changed output:", output); 
+//String11. Satr berilgan. Agar satrda butun son ifodalangan bo'lsa 1 chiqarilsin, agar haqiqiy son bo'lsa 2 chiqarilsin. Agar satrni songa aylantirish imkoni bo'lmasa 0 chiqarilsin. Haqiqiy sonning kasr qismi nuqta "." Bilan ajratilgan deb qabul qilinsin
+// function number(n){
+//     if (n.includes('.')){
+//         return 2;
+//     }
+//     if(isNaN(n)){
+//         return 0;
+//     }
+//     return 1;
+// }
+// console.log(number(10))
+
+//String14. N1, N2 natural sonlari va S1, S2 satr berilgan. S1 satrning dastlabki N1 ta belgisidan va S2 satrning oxirgi N2 ta belgisidan iborat yangi satr hosil qiling.
+// function combineStrings(S1, S2, N1, N2) {
+//     let qism1 = S1.substring(0, N1);
+//     let qism2 = S2.substring(S2.length - N2);
+//     return qism1 + qism2;
+// }
+// console.log(combineStrings("Coding", "Numbers", 4, 5)); 
+
+//String15. C belgisi va S satri berilgan. S satrida uchragan har bir C belgisini 2 marta orttiruvchi programma tuzilsin.
+// function makeitdouble(S, C) {
+//     let natija = "";
+//     for (let belgi of S) {
+//         if (belgi === C) {
+//             natija += belgi + belgi; 
+//         } else {
+//             natija += belgi; 
+//         }
+//     }
+//     return natija;
+// }
+// console.log(makeitdouble("app", "a")); 
+
+// /String16. C belgisi va S1, S2 satrlari berilgan. S1 satriga shu satrda uchragan har bir C belgisidan oldin S2 satrini qo'shuvchi programma tuzilsin.
+// function addBeforeChar(S1, S2, C) {
+//     let natija = "";
+//     for (let belgi of S1) {
+//         if (belgi === C) {
+//             natija += S2 + belgi;
+//         } else {
+//             natija += belgi;
+//         }
+//     }
+//     return natija;
+// }
+// console.log(addBeforeChar("hello world", "***", "o")); 
+
+//String18. S1 va S2 satrlari berilgan. S1 satrida birinchi uchragan S2 satrini o'chirib tashlovchi programma tuzilsin. Agar S1 satrida S2 satri uchramasa S1 satri o'zgarishsiz qoldirilsin.
+// function deletethefirst(S1, S2) {
+//     let natija = S1.replace(S2, "");
+//     return natija;
+// }
+// console.log(deletethefirst("are you zero or one?", "one")); 
+
+//String20. S1, S2 va S3 satrlari berilgan. S1 satrida birinchi uchragan S2 satrini S3 satriga o'zgartiruvchi programma tuzilsin.
+// function replaceFirstOccurrence(S1, S2, S3) {
+//     let natija = S1.replace(S2, S3);   
+//     return natija;
+// }
+// console.log(replaceFirstOccurrence("THe people who are crazy enough to think that they can change the world are the ones who do it", "world", "do"));
+
