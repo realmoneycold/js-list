@@ -1,129 +1,124 @@
-//String1. Sonning necha xonali ekanini, raqamlari yig’indisini chiqaruvchi dastur tuzing.
-// let num = 1298
-// num = num.toString()
-// let sum = 0
-// for(let item of num){
-//     console.log(item)
-//     sum += Number(item)
+// 1
+// /1. Quyidagi massivdagi barcha odamlarni yoshlarining o’rtacha qiymatini chiqaruvchi getAverageAge(arr) nomli funksiya yozing.
+// const people = [
+// { name: "Abdulaziz", age: 33 },
+// { name: "Erkin", age: 22 },
+// { name: "Temur", age: 34 },
+// { name: "Sardor", age: 20 },
+// ];
+// total = 0
+// function getAvarageAge(arr){
+//     arr.forEach(element => {
+//         total = total + element.age;
+//     });
+//     avarage = total / arr.length;
+//     console.log(avarage)
 // }
-// console.log(sum)
+// getAvarageAge(people)
 
-//String2. UTF-16 jadvalida kiritilgan belgidan oldin va keyin turuvchi belgilarni chiqaruvchi programma tuzilsin.
-// let belgi = "a"
-// let position = belgi.codePointAt()
-// console.log(String.fromCharCode(position+1))
-// console.log(String.fromCharCode(position-1))
+// 2
+// 2. Massiv ichidagi har bir objectga isMarried nomli property qo’shilsin. Agar object yoshi 25 dan kichi bo’lsa isMarried ga false, aks holda true qiymat o’zlashtirilsin.
+// const people = [
+// { name: "Abdulaziz", age: 33 },
+// { name: "Erkin", age: 22 },
+// { name: "Temur", age: 34 },
+// { name: "Sardor", age: 20 },
+// ];
+// function isMarried(arr){
+//    return arr.map(person => ({
+//     ...person,
+//     isMarried: person.age > 25
+//    }));
+// }
+// console.log(isMarried(people))
 
-//String3. UTF-16 jadvali orqali faqat katta va kichik harflardan iborat satr qaytaruvchi mos ravishda getUpperCases() vs getLowerCases() nomli funksiyalar hosil qiling.
-// function getUpperCases(str){
-//     let natija = ""
-//     for (let item of str){
-//         let letter = str.charCodeAt(item);
-//         if (letter >= 97 && letter <= 122){
-//             natija += String.fromCharCode(code - 32)
-//         }   
-//         else{
-//             natija += str[item]
+// /3. Quyidagi objectlardan tuzilgan massiv ichidagi yoshi eng katta va yoshi eng kichik bo’lgan insonning ismlarini qaytaruvchi getNameMaxMinAge(arr) nomli funksiya yozing. (for)
+// Output: ["Temur", "Sardor"]
+// const people = [
+// { name: "Abdulaziz", age: 33 },
+// { name: "Erkin", age: 22 },
+// { name: "Temur", age: 34 },
+// { name: "Sardor", age: 20 },
+// ];
+// function getNameMaxMinAge(arr){
+//     let maxPerson = arr[0];
+//     let minPerson = arr[0];
+
+//     for(let i = 1; i<arr.length; i++){
+//         if (arr[i].age > maxPerson.age){
+//             maxPerson = arr[i]
+//         }
+//         if (arr[i].age < minPerson.age){
+//             minPerson = arr[i];
 //         }
 //     }
-//     return natija;
+//     return [maxPerson.name, minPerson.name];
 // }
-// function getLowercase(str){
-//     let natija = "";
-//     for (let item of str){
-//         let letter = str.charCodeAt(item);
-//         if (letter>= 65 && letter <=90){
-//             natija += String.fromCharCode(code + 32);
-//         }
-//         else{
-//             natija +=str[item]
-//         }
-//     }
-//     return natija;
+// console.log(getNameMaxMinAge(people))
+
+//4. Objectda turli xil kalitlar bir xil qiymatlarga ega, kalitlari o'sha qiymatlardan iborat shunday object tuzingki, bu objectning qiymatlari massiv ko'rinishidagi eski objectning kalitlarlaridan iborat bo'lsin.
+// Input: {1: 20, 2: 30, 3: 20, 4: 40, 5: 30, 6: 50, 7: 40, 8: 20}
+// Output: {20: [1, 3, 8], 30: [2, 5], 40: [4, 7]: 50: [6]}
+// tf is that?
+
+//UYGA VAZIFA
+// 1. Quyidagi objectni outputdagi ko'rinishda chiqaring. (toString, join)
+// const me = {
+// firstName: "Abdulaziz",
+// lastName: "Toshpulatov",
+// age: 23,
+// languages: ["js", "python", "c++", "nodejs"],
+// friends: ["Jamshid", "Abbos", "Jalol", "Mar'uf"],
+// };
+// console.log(`firstName: ${me.firstName}`);
+// console.log(`lastName: ${me.lastName}`);
+// console.log(`age: ${me.age}`);
+// console.log(`languages: ${me.languages.toString()}`);
+// console.log(`friends: ${me.friends.join("+")}`);
+
+// /2. Kalitlari 1 dan n gacha bo’lganlar sonlarga, qiymatlari esa o’sha sonlarning kvatratiga teng object hosil qiling. (for)
+// function Input(arr){
+//     let result = {}; 
+//   for (let i = 1; i <= arr; i++) {
+//     result[i] = i ** 2; 
+//   }
+//   return result; 
 // }
-// let satr = "ABcdd"
-// console.log(`Original: ${satr}`)
-// console.log(`Upper: `, getUpperCases(satr));
-// console.log(`Lower: `, getLowercase(satr));
+// console.log(Input(5))
 
-
-//String4. Satr berilgan. Shu satr belgilari orasiga bittadan probel qo'yilgan satr hosil qiluvchi va ekranga chiqaruvchi programma tuzilsin. Kiritilgan satrda probel yo'q deb qabul qilinsin.
-// Input: let str = "abcd"
-// Output: "a b c d"
-// let str = "abcd";
-// let natija = str.split("").join(" ");
-// console.log(natija)
-
-//String5. C belgisi va S1, S2 satrlari berilgan. S1 satriga shu satrda uchragan har bir C belgisidan keyin S2 satrini qo'shuvchi programma tuzilsin.
-// Input: S1 = "Hello world"; S2 = "*", C = "l"
-// Output: "Hel*l*o worl*d"
-// let S1 = "Hello world";
-// let S2 = "*";
-// let C = "l";
-// let result = S1.split(C).join(C + S2);
-// console.log(result);
-
-//String7. Probel bilan ajratilgan o'zbekcha so'zlardan iborat str nomli satr berilgan. Satrdagi so'zlar sonini qaytaruvchi getNumberOfWords(str) nomli funksiya tuzilsin.
-// function getNumberOfWords(str) {
-//     let sanash = 0;
-//     let suz = false;
-//     for (let i = 0; i < str.length; i++) {
-//         if (str[i] !== " ") {
-//             if (suz === false) {
-//                 sanash++;
-//                 suz = true; 
-//             }
-//         } else {
-//             suz = false; 
-//         }
-//     }
-//     return sanash;
+//4. 2-misoldan hosil bo’lgan objectning kalitlari va qiymatlari yig’indisini toping. (Object.keys(), Object.values())
+// const names = ["Abdulaziz", "Safarmurod", "O’rol", "Jahongir"];
+// function length(arr){
+//     let result = {};
+//     for (let i = 0; i < arr.length; i++) {
+//     let name = arr[i];      
+//     let len = name.length;  
+//     result[name] = len;
+//   }
+//   return result;
 // }
-// console.log(getNumberOfWords("Hello world Mr robot! "));
+// console.log(length(names));
 
-//String8. Probel bilan ajratilgan va faqat katta harflar bilan terilgan o'zbekcha so'zlardan iborat satr berilgan. Satrdagi kamida bitta 'A' harfi bor so'zlar sonini aniqlovchi programma tuzilsin.
-// let satr = "ITZ NOT BIG IDEA";
-// let words = satr.split(' ');
-// let count = 0;
-// for (let soz of words) {
-//     if (soz.includes('A')) {
-//         count++;
-//     }
+//5. Shunday object berilganki, uning kalitlari mahsulotlardan va qiymatlari esa ularning narxlaridan tuzilgan. Barcha mahsulot qancha turishini toping. (Object.values())
+// Input: {"Apelsin": 10000, "Olma": 12000, "Mandarin": 8000, "Banan": 20000}
+// Output: 50000
+// const products = {"Apelsin": 10000, "Olma": 12000, "Mandarin": 8000, "Banan": 20000}
+// function totalprice(arr) {
+//   const prices = Object.values(arr);
+//   let total = 0;
+//   prices.forEach(price => {
+//     total += price;
+//   });
+//   return total;
 // }
-// console.log("'A' harfi bor so'zlar soni:", count);
+// console.log(totalprice(products));
 
-// function getMinOfString(str){
-//     let words = str.split(' ');
-
+//6
+// const input = {abc: 1, 123: 2, d: 5};
+// function Inputt(arr) {
+//   const keys = Object.keys(arr);
+//   return keys.every(key => {
+//     return isNaN(key); 
+//   });
 // }
-// getMinOfString("Are you zero or one?")
-
-
-//String10. Faylning to'liq nomini o'zida akslantirgan satr berilgan. Ya'ni disk nomi, papkalar nomi, faylning nomi va kengaytmasi. Satrdan birinchi papka nomini aniqlovchi programma tuzilsin.
-// Input: D:/Abdulaziz/Books/Programmer.exe
-// Output: Abdulaziz
-// let path = "D:/Abdulaziz/Books/Programmer.exe";
-// let qismlar = path.split('/');
-// console.log("Birinchi papka:", qismlar[1]);
-
-////Uyga vazifa
-//Sting1. n butun soni berilgan (1 <= n <= 26). Lotin alfavitidagi dastlabki n ta katta harflarni chiqaruvchi programma tuzilsin.
-// let n = 5;
-// let natija = "";
-// for (let i = 0; i < n; i++) {
-//     natija += String.fromCharCode(65 + i);
-// }
-// console.log(natija); 
-
-//String3. Satr beilgan. Satrning birinchi va oxirgi belgisini UTF-16 jadvalidagi kodini chiqaruvchi programma tuzilsin.
-// let s = "Hello";
-// console.log("First word  number:", s.charCodeAt(0));
-// console.log("Last word number:", s.charCodeAt(s.length - 1));
-
-// /String4. N natural soni va belgi berilgan. N ta kiritilgan belgidan iborat satr hosil qiling va ekranga chiqaring. Masalan: N = 5; Belgi = 'A'; Natija = AAAAA
-// let N = 5;
-// let Belgi = 'G';
-// console.log(Belgi.repeat(N)); 
-
-//String5. Kiritilgan satrni teskari tartibda chiqaruvchi programma tuzilsin.
-    
+// console.log(Inputt(input)); 
