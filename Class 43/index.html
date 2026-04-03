@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicorp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#252B42',
+                        gray: '#737373',
+                        orange: '#FFA62B',
+                        blue: '#00A0C1',
+                    },
+                    boxShadow: {
+                        card: '0 10px 25px rgba(0, 0, 0, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray">
+
+    <section>
+        <div class="container mx-auto px-4 lg:px-32 pt-6 flex justify-between items-center">
+            <h2 class="text-xl font-bold text-dark">Indicorp</h2>
+            <nav class="hidden md:flex gap-10">
+                <a href="#" class="text-sm font-semibold hover:text-dark">Home</a>
+                <a href="#" class="text-sm font-semibold hover:text-dark">About</a>
+                <a href="#" class="text-sm font-semibold hover:text-dark">Advice</a>
+                <a href="#" class="text-sm font-semibold hover:text-dark">Services</a>
+                <a href="#" class="text-sm font-semibold hover:text-dark">Contact</a>
+            </nav>
+        </div>
+        <div class="container mx-auto px-4 lg:px-8 mt-8">
+            <div class="bg-no-repeat bg-cover bg-center rounded-2xl min-h-[800px] relative px-4 lg:px-48" style="background-image: url('./images/cover.png');">
+                
+                <div class="pt-20">
+                    <h1 class="text-5xl lg:text-6xl font-bold text-dark leading-tight">
+                        EMPOWER <br> YOUR BUSINESS
+                    </h1>
+                    <p class="text-xl text-gray mt-8 font-medium">
+                        We know how large objects will act, <br>
+                        but things on a small scale.
+                    </p>
+                    
+                    <div class="flex gap-4 mt-8">
+                        <button class="bg-orange text-white text-sm font-bold w-48 py-3 rounded-full hover:bg-orange/90 transition">
+                            Get Quote Now
+                        </button>
+                        <button class="bg-transparent border border-blue text-blue text-sm font-bold w-48 py-3 rounded-full hover:bg-blue hover:text-white transition">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-8 mt-40 pb-16">
+                    <div class="bg-white shadow-card w-full lg:w-80 px-10 py-10 transition hover:-translate-y-2 cursor-pointer">
+                        <img src="./images/Vector (4).png" alt="icon" class="h-8 w-auto">
+                        <h3 class="text-dark text-2xl font-bold mt-5">Digital Marketing</h3>
+                        <p class="text-sm mt-3 font-medium">We focus on ergonomics and <br> meeting you where you work.</p>
+                    </div>
+
+                    <div class="bg-white shadow-card w-full lg:w-80 px-10 py-10 transition hover:-translate-y-2 cursor-pointer">
+                        <img src="./images/Vector (5).png" alt="icon" class="h-8 w-auto">
+                        <h3 class="text-dark text-2xl font-bold mt-5">Digital Marketing</h3>
+                        <p class="text-sm mt-3 font-medium">We focus on ergonomics and <br> meeting you where you work.</p>
+                    </div>
+
+                    <div class="bg-blue shadow-card w-full lg:w-80 px-10 py-10 transition hover:-translate-y-2 text-white cursor-pointer group">
+                        <img src="./images/Vector (6).png" alt="icon" class="h-8 w-auto filter brightness-0 invert">
+                        <h3 class="text-white text-2xl font-bold mt-5">Digital Marketing</h3>
+                        <p class="text-white text-sm mt-3 font-medium">We focus on ergonomics and <br> meeting you where you work.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-4 mt-32">
+        <div class="text-center">
+            <h2 class="text-dark text-4xl font-bold">WHY CHOOSE US</h2>
+            <p class="text-sm mt-3 font-medium">Problems trying to resolve the conflict between the two major realms <br> of Classical physics: Newtonian mechanics</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-10 mt-20">
+            <div class="bg-white shadow-card w-56 h-56 flex flex-col items-center justify-center transition hover:-translate-y-1">
+                <img src="./images/icn settings .icn-lg.png" alt="settings" class="mb-4 h-12 w-auto">
+                <h4 class="text-dark text-5xl font-bold">3K</h4>
+                <p class="text-dark text-sm font-bold mt-2">CASES DONE</p>
+            </div>
+            
+            <div class="bg-white shadow-card w-56 h-56 flex flex-col items-center justify-center transition hover:-translate-y-1">
+                <img src="./images/Vector (7).png" alt="customers" class="mb-4 h-12 w-auto">
+                <h4 class="text-dark text-5xl font-bold">45</h4>
+                <p class="text-dark text-sm font-bold mt-2">HAPPY CUSTOMERS</p>
+            </div>
+            
+            <div class="bg-white shadow-card w-56 h-56 flex flex-col items-center justify-center transition hover:-translate-y-1">
+                <img src="./images/Vector (8).png" alt="awards" class="mb-4 h-12 w-auto">
+                <h4 class="text-dark text-5xl font-bold">12+</h4>
+                <p class="text-dark text-sm font-bold mt-2">AWARD WINNING</p>
+            </div>
+            
+            <div class="bg-white shadow-card w-56 h-56 flex flex-col items-center justify-center transition hover:-translate-y-1">
+                <img src="./images/Vector (9).png" alt="cases" class="mb-4 h-12 w-auto">
+                <h4 class="text-dark text-5xl font-bold">1.5K</h4>
+                <p class="text-dark text-sm font-bold mt-2">CASES DONE</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-50 mt-32 py-20 px-4">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <h2 class="text-dark text-4xl font-bold">Practice Advice</h2>
+                <p class="text-sm mt-3 font-medium">Problems trying to resolve the conflict between <br> the two major realms of Classical physics: Newtonian mechanics</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-10 mt-16">
+                <div class="bg-white shadow-card w-60 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="p-8 pb-0">
+                        <h3 class="text-dark font-bold text-base">A single source <br> of truth</h3>
+                        <p class="text-sm mt-4 mb-8 font-medium">Newton thought that <br> light was made up of <br> particles, but then it</p>
+                    </div>
+                    <img src="./images/media.png" alt="cover" class="w-full h-auto object-cover">
+                </div>
+
+                <div class="bg-white shadow-card w-60 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="p-8 pb-0">
+                        <h3 class="text-dark font-bold text-base">A single source <br> of truth</h3>
+                        <p class="text-sm mt-4 mb-8 font-medium">Newton thought that <br> light was made up of <br> particles, but then it</p>
+                    </div>
+                    <img src="./images/cover (1).png" alt="cover" class="w-full h-auto object-cover">
+                </div>
+
+                <div class="bg-white shadow-card w-60 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="p-8 pb-0">
+                        <h3 class="text-dark font-bold text-base">A single source <br> of truth</h3>
+                        <p class="text-sm mt-4 mb-8 font-medium">Newton thought that <br> light was made up of <br> particles, but then it</p>
+                    </div>
+                    <img src="./images/cover (2).png" alt="cover" class="w-full h-auto object-cover">
+                </div>
+
+                <div class="bg-white shadow-card w-60 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="p-8 pb-0">
+                        <h3 class="text-dark font-bold text-base">A single source <br> of truth</h3>
+                        <p class="text-sm mt-4 mb-8 font-medium">Newton thought that <br> light was made up of <br> particles, but then it</p>
+                    </div>
+                    <img src="./images/cover (3).png" alt="cover" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-4 mt-32 mb-32">
+        <div class="text-center">
+            <h2 class="text-dark text-4xl font-bold">We are providing best <br> business service.</h2>
+            <p class="text-sm mt-4 font-medium">Problems trying to resolve the conflict between the two major realms <br> of Classical physics: Newtonian mechanics</p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-32 mt-20">
+            <img src="./images/col-md-8.png" alt="video" class="w-full max-w-[500px] h-auto object-cover rounded shadow-lg">
+
+            <div class="max-w-[400px]">
+                <h3 class="text-dark text-4xl font-bold leading-tight">Most trusted in <br> our field</h3>
+                <p class="text-sm mt-6 font-medium">Most calendars are designed for teams. Slate <br> is designed for freelancers who want a <br> simple way to plan their schedule.</p>
+                
+                <div class="mt-10 flex flex-col gap-6">
+                    <div class="flex items-start gap-5">
+                        <img src="./images/Vector (10).png" alt="check" class="w-6 mt-1 flex-shrink-0">
+                        <div>
+                            <h4 class="text-dark font-bold text-sm">the quick fox jumps over the lazy dog</h4>
+                            <p class="text-sm mt-1 font-medium">Things on a very small scale ...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-5">
+                        <img src="./images/Vector (10).png" alt="check" class="w-6 mt-1 flex-shrink-0">
+                        <div>
+                            <h4 class="text-dark font-bold text-sm">the quick fox jumps over the lazy dog</h4>
+                            <p class="text-sm mt-1 font-medium">Things on a very small scale ...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
